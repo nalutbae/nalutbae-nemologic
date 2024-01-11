@@ -14,10 +14,16 @@ import java.net.URLDecoder;
  * An application that parses the HTML of the quiz page
  * at <a href="http://nemonemologic.com">nemonemologic.com</a>
  * and solves the Nemonemologic puzzle on that page.
+ *
+ * Usage
+ * <pre>
+ *     $ ./gradlew build
+ *     $ java -cp build/libs/nalutbae-nemologic-0.0.1-SNAPSHOT.jar com.nalutbae.nemologic.NemonemologicDotComQuizParser "http://nemonemologic.com/play_logic.php?quid=43"
+ * </pre>
  *  
  * @author nalutbae
  */
-public class NemologicQuizParser {
+public class NemonemologicDotComQuizParser {
 
 	private static final String QUIZ_URL = "http://nemonemologic.com/play_logic.php?quid=43";
 
