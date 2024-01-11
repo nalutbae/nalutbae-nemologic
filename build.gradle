@@ -18,10 +18,22 @@ dependencies {
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(7)
+        languageVersion = JavaLanguageVersion.of(8)
     }
 }
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
+}
+
+jar {
+    duplicatesStrategy = 'exclude'
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    manifest {
+        attributes(
+                'Main-Class': 'com.nalutbae.nemologic.NemonemologicDotComQuizParser'
+        )
+    }
 }
