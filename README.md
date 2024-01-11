@@ -14,25 +14,7 @@ NemoLogicSolver is a Java library for solving Nemonemo logic puzzles. It provide
 
 - Java 7 or later
 
-### Installation
-
-To use NemoLogicSolver in your project, you can include it as a dependency using Maven or Gradle.
-
-#### Maven:
-
-```xml
-<dependency>
-    <groupId>com.haeny</groupId>
-    <artifactId>nemologic</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
-</dependency>
-```
-
-```gradle
-implementation 'com.haeny:nemologic:0.0.1-SNAPSHOT'
-```
-
-#### Usage
+### Usage
 
 1. Initialize NemoLogicSolver with row and column hints:
 
@@ -63,9 +45,9 @@ long[] solvedGrid = solver.getGrid();
 // ...
 ```
 
-#### Dependencies
+### Dependencies
 - Jsoup - Java HTML Parser
 - json-simple - A simple Java toolkit for JSON
 
-#### License
+### License
 This project is licensed under the MIT License - see the LICENSE file for details.
