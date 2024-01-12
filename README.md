@@ -5,14 +5,32 @@ NemoLogicSolver is a Java library for solving Nemonemo logic puzzles. It provide
 ## Features
 
 - Solves Nemonemo logic puzzles with various configurations.
-- Supports Java 7.
+- Supports Java 8.
 - Integrates with popular libraries such as Jsoup and json-simple.
 
 ## Getting Started
 
 ### Prerequisites
 
-- Java 7 or later
+- Java 8 or later
+
+### Installation
+
+#### Maven
+
+```xml
+<dependency>
+    <groupId>com.story4g.nalutbae</groupId>
+    <artifactId>nemologic</artifactId>
+    <version>0.0.1</version>
+</dependency>
+```
+
+#### Gradle
+
+```gradle
+implementation 'com.story4g.nalutbae:nemologic:0.0.1'
+```
 
 ### Usage
 
@@ -28,11 +46,7 @@ NemoLogicSolver solver = new NemoLogicSolver(rowsHints, columnHints);
 2. Process and solve the puzzle:
 
 ```java
-try {
-    solver.process();
-} catch (Exception e) {
-    e.printStackTrace();
-}
+solver.process();
 ```
 
 ### Dependencies
