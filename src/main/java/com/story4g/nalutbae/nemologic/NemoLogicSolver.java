@@ -1,4 +1,4 @@
-package com.nalutbae.nemologic;
+package com.story4g.nalutbae.nemologic;
 
 import java.io.BufferedWriter;
 import java.io.OutputStream;
@@ -32,8 +32,8 @@ public class NemoLogicSolver {
     /**
      * Constructor, initialized by receiving row/column hints
      *
-     * @param rowsHints
-     * @param columnHints
+     * @param rowsHints Arrangement of the number of consecutive colored cells per row.
+     * @param columnHints Arrangement of the number of consecutive colored cells per column.
      */
     public NemoLogicSolver(int[][] rowsHints, int[][] columnHints) {
         this.rowSize = rowsHints.length;
@@ -43,6 +43,9 @@ public class NemoLogicSolver {
         this.grid = new long[rowSize];
     }
 
+    /**
+     * processing nemonemo logic solving
+     */
     public void process() {
         OutputWriter out = new OutputWriter(System.out);
         initializeRowPermutations();
