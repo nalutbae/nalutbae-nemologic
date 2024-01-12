@@ -18,7 +18,7 @@ import java.net.URLDecoder;
  * Usage
  * <pre>
  *     $ ./gradlew build
- *     $ java -cp build/libs/nalutbae-nemologic-0.0.1-SNAPSHOT.jar com.nalutbae.nemologic.NemonemologicDotComQuizParser "http://nemonemologic.com/play_logic.php?quid=43"
+ *     $ java -cp build/libs/nalutbae-nemologic-0.0.1-SNAPSHOT.jar com.story4g.nalutbae.nemologic.NemonemologicDotComQuizParser "http://nemonemologic.com/play_logic.php?quid=43"
  * </pre>
  *  
  * @author nalutbae
