@@ -1,4 +1,4 @@
-package com.nalutbae.nemologic;
+package com.story4g.nalutbae.nemologic;
 
 import org.json.simple.parser.ParseException;
 import org.jsoup.Jsoup;
@@ -27,6 +27,12 @@ public class NemonemologicDotComQuizParser {
 
 	private static final String QUIZ_URL = "http://nemonemologic.com/play_logic.php?quid=43";
 
+	/**
+	 * parse and solve quiz of  <a href="http://nemonemologic.com">nemonemologic</a> site.
+	 *
+	 * @param args http://nemonemologic.com/play_logic.php?quid=43 format
+	 * @throws Exception any exception
+	 */
 	public static void main(String[] args) throws Exception {
 		String link = (args != null && args.length > 0) ? args[0] : QUIZ_URL;
 		Document doc = Jsoup.connect(link).get();

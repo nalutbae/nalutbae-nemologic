@@ -6,7 +6,7 @@ repositories {
     mavenCentral()
 }
 
-group 'com.nalutbae'
+group 'com.story4g.nalutbae'
 version '0.0.1-SNAPSHOT'
 
 dependencies {
