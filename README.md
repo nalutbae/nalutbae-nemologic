@@ -35,19 +35,9 @@ try {
 }
 ```
 
-3. Retrieve the solution:
-
-```java
-// Access the solved grid
-long[] solvedGrid = solver.getGrid();
-
-// Process the solution as needed
-// ...
-```
-
 ### Dependencies
 - Jsoup - Java HTML Parser
 - json-simple - A simple Java toolkit for JSON
 
 ### License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the [The Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0.txt)
