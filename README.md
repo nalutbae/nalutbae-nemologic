@@ -72,7 +72,7 @@ solver.process();
 ```
 
 Check out some additional test examples:
-[Test Codes]([NemoLogicSolverTest.java](src/test/java/com/story4g/nalutbae/nemologic/NemoLogicSolverTest.java))
+[NemoLogicSolverTest.java](src%2Ftest%2Fjava%2Fcom%2Fstory4g%2Fnalutbae%2Fnemologic%2FNemoLogicSolverTest.java)
 
 ### Dependencies
 - Jsoup - Java HTML Parser
