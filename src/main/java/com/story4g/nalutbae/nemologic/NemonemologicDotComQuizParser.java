@@ -29,9 +29,7 @@ public class NemonemologicDotComQuizParser {
 
     /**
      * When debugging, pass `isDebug` as a java vm option.
-     * <pre>
-     *     $ java -DisDebug NemonemologicDotComQuizParser
-     * <pre/>
+     * <code>$ java -DisDebug NemonemologicDotComQuizParser</code>
      */
     public static final boolean IS_DEBUG = Boolean.parseBoolean(System.getProperty("isDebug"));
 
