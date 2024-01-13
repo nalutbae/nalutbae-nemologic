@@ -25,6 +25,14 @@ import java.net.URLDecoder;
  */
 public class NemonemologicDotComQuizParser {
 
+	/**
+	 * When debugging, pass `isDebug` as a java vm option.
+	 * <pre>
+	 *     $ java -DisDebug NemonemologicDotComQuizParser
+	 * <pre/>
+	 */
+	public static final boolean IS_DEBUG = Boolean.parseBoolean(System.getProperty("isDebug"));
+
 	private static final String QUIZ_URL = "http://nemonemologic.com/play_logic.php?quid=43";
 
 	/**
@@ -44,6 +52,11 @@ public class NemonemologicDotComQuizParser {
 		int[][] hhintsArray = transformArray((JSONArray) valueObj.get("hhints"));
 		int[][] vhintsArray = transformArray((JSONArray) valueObj.get("vhints"));
 
+		if (IS_DEBUG) {
+			System.out.println(arrayToString(hhintsArray));
+			System.out.println(arrayToString(vhintsArray));
+		}
+
 		NemoLogicSolver solver = new NemoLogicSolver(hhintsArray, vhintsArray);
 		solver.process();
 	}
@@ -62,5 +75,31 @@ public class NemonemologicDotComQuizParser {
 			}
 		}
 		return transposed;
+	}
+
+	private static String arrayToString(int[][] array) {
+		StringBuilder result = new StringBuilder("{");
+
+		for (int i = 0; i < array.length; i++) {
+			result.append("{");
+
+			for (int j = 0; j < array[i].length; j++) {
+				result.append(array[i][j]);
+
+				if (j < array[i].length - 1) {
+					result.append(", ");
+				}
+			}
+
+			result.append("}");
+
+			if (i < array.length - 1) {
+				result.append(", ");
+			}
+		}
+
+		result.append("}");
+
+		return result.toString();
 	}
 }
